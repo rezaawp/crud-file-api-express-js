@@ -61,6 +61,12 @@ app.delete("/delete/:id", (req, res) => {
   }
 });
 
+app.get("/all", (req, res) => {
+  const data = readDataFromFile();
+
+  return res.send(data);
+});
+
 // Utility functions to read/write data from/to file
 function readDataFromFile() {
   try {
